@@ -1,0 +1,39 @@
+{
+  "name": "mid-cli",
+  "version": "0.0.2",
+  "author": "xudeming",
+  "email": "xudeming208@126.com",
+  "description": "A simple CLI for scaffolding mid framework.",
+  "bin": "bin/index.js",
+  "keywords": [
+    "nodejs",
+    "mid",
+    "mvc",
+    "framework",
+    "mid-cli"
+  ],
+  "scripts": {
+    "lint": "fecs src --type=js --reporter=baidu --rule=true",
+    "build": "babel src -d lib"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xudeming208/mid-cli"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cfonts": "^1.1.3",
+    "colors": "^1.1.2",
+    "commander": "^2.11.0",
+    "nodeopen": "0.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "fecs": "^1.4.1"
+  }
+}

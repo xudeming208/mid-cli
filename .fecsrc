@@ -1,0 +1,27 @@
+{
+    "eslint": {
+        "env": {
+            "node": true,
+            "es6": false,
+            "browser": false
+        },
+
+        "rules": {
+            "no-alert": 2,
+            "no-console": 0,
+            "fecs-indent": 0
+        },
+
+        "globals": {
+
+        }
+    },
+
+    "csshint": {
+
+    },
+
+    "htmlcs": {
+
+    }
+}

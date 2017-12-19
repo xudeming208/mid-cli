@@ -11,17 +11,18 @@ const path = require('path');
 const nodeopen = require('nodeopen');
 const execFun = require('./execFun');
 const ip = require('./getIp')();
+const serverPort = 8083;
+const jserverPort = 8084;
 
 // config
 const config = () => {
-	let fileName = path.resolve('./mid/nest/config/config.json');
+	let fileName = path.resolve('./mid/server/config/config.json');
 	let content = require(fileName);
-	let serverPort = Math.random() * 1000 | 0 + 6000;
-	let jserverPort = serverPort + 1;
-	let staticHost = `http://${ip}:${jserverPort}`;
-	content.etc.serverPort = serverPort;
-	content.etc.jserverPort = jserverPort;
-	content.site.staticHost = staticHost;
+	// let serverPort = Math.random() * 1000 | 0 + 6000;
+	// let jserverPort = serverPort + 1;
+	// content.etc.serverPort = serverPort;
+	// content.etc.jserverPort = jserverPort;
+	content.site.staticHost = `http://${ip}:${jserverPort}`;
 
 	/* eslint-disable arrow-parens */
 	fs.writeFile(fileName, JSON.stringify(content, null, '\t'), 'utf-8', (err) => {
@@ -30,7 +31,7 @@ const config = () => {
 			console.dir(err);
 		}
 		// exec framework
-		execFun(['cd mid/nest', 'npm run start'], 'framework start', () => {
+		execFun(['cd mid', 'npm run start'], 'framework start', () => {
 			/* eslint-disable quotes */
 			console.log(`In the browser input`, `127.0.0.1:${serverPort}`.green.underline, `or`,
 				`${ip}:${serverPort}`.green.underline, `, and then can see the pages.\n`);

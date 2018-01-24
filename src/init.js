@@ -12,15 +12,14 @@ const execFun = require('./execFun');
 const installPackage = require('./installPackage');
 
 
-
-// 没有参数的情况
-if (!process.argv.slice(2).length) {
-	// return Commander.help()
-	console.log('请执行"mid-cli -h"查看帮助');
-}
-
-
 Commander.usage('<command> [options]');
+
+Commander.on('--help', function () {
+	console.log('');
+	console.log('');
+	console.log('  Mid: https://github.com/xudeming208/mid\n');
+	console.log('  Home: https://github.com/xudeming208/mid-cli\n');
+});
 
 // version
 Commander.option('-v, -V, --version', 'output the version number', () => {
@@ -41,9 +40,15 @@ Commander.option('-v, -V, --version', 'output the version number', () => {
 // init
 Commander
 	.command('init')
-	.description('init project')
+	.description('Init Mid project.')
 	.action(() => {
 		execFun('git clone https://github.com/xudeming208/mid.git', 'git clone', installPackage);
 	});
 
 Commander.parse(process.argv);
+
+
+// 没有参数的情况
+if (!process.argv.slice(2).length) {
+	Commander.help();
+}

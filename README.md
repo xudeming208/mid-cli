@@ -1,4 +1,14 @@
-# mid-cli
+<h1 align="center">
+  mid-cli
+</h1>
+<br>
+<p align="center">
+  <a href="https://nodejs.org"><img src="https://img.shields.io/node/v/mid-cli.svg" alt="Nodejs"></a>
+  <a href="https://www.npmjs.com/package/mid-cli"><img src="https://img.shields.io/npm/v/mid-cli.svg" alt="Version"></a>
+  <a href="https://npmcharts.com/compare/mid-cli?minimal=true"><img src="https://img.shields.io/npm/dm/mid-cli.svg" alt="Downloads"></a>
+  <a href="https://github.com/xudeming208/mid-cli/graphs/contributors"><img src="https://img.shields.io/github/contributors/xudeming208/mid-cli.svg" alt="Contributors"></a>
+  <a href="https://www.npmjs.com/package/mid-cli"><img src="https://img.shields.io/github/license/xudeming208/mid-cli.svg" alt="License"></a>
+</p>
 
 ## 介绍
 mid 框架脚手架

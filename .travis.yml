@@ -1,14 +1,21 @@
 sudo: false
+dist: trusty
 language: node_js
 node_js:
-  - "7.6.0"
+    - "7.6.0"
 
 branches:
   only:
     - master
+cache:
+  directories:
+    - node_modules
 
+before_install:
+    - go get github.com/mattn/goveralls
 install:
     - npm install
 script:
     - npm run lint
     - npm run build
+    - goveralls -service=travis-ci

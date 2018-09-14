@@ -19,7 +19,6 @@ mid 框架脚手架
 - sudo npm i mid-cli -g
 
 ## 命令
-
 ### 帮助
 `
 mid-cli -h

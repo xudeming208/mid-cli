@@ -16,3 +16,6 @@ install:
 script:
     - npm run lint
     - npm run build
+
+after_success:
+    - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls --verbose

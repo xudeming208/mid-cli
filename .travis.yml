@@ -2,6 +2,7 @@ sudo: false
 dist: trusty
 language: node_js
 node_js:
+    - "node"
     - "7.6.0"
 
 branches:
@@ -11,8 +12,6 @@ cache:
   directories:
     - node_modules
 
-before_install:
-    - go get github.com/mattn/goveralls
 install:
     - npm install
 script:

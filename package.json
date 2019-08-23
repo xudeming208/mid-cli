@@ -1,6 +1,6 @@
 {
   "name": "mid-cli",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "xudeming",
   "email": "xudeming208@126.com",
   "description": "A simple CLI for scaffolding mid framework.",
@@ -42,7 +42,6 @@
     "babel-core": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "coveralls": "^3.0.2",
     "fecs": "^1.4.1"
   }
 }
